@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+function smitty() {
+  echo; echo
+  echo "[INFO] $@"
+  $@
+}
+
+smitty pushd src/
+smitty docker build --rm -t jumanjiman/dropbox .
+smitty popd

@@ -1,0 +1,23 @@
+=================================================================
+
+                     *** WARNING ***
+
+  To protect the system from unauthorized use activities
+  on this system are monitored and recorded and subject to
+  audit. Use of this system is expressed consent to such
+  monitoring and recording. Any unauthorized access or use of
+  this system is prohibited and could be subject to criminal
+  and civil penalties and/or administrative action.
+
++---------------------------------------------------------------+
+|                                                               |
+|  Note: the "ls" command is disabled and returns this error:   |
+|                                                               |
+|      ls: 550 Permission denied.                               |
+|                                                               |
+|  To upload a file successfully, please do the following:      |
+|                                                               |
+|      ftp> cd uploads                                          |
+|      ftp> put [filename]                                      |
+|                                                               |
++---------------------------------------------------------------+
