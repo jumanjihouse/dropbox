@@ -9,7 +9,7 @@ describe 'jumanjiman/dropbox' do
   end
 
   before :each do
-    @config = @image.json['config']
+    @config = @image.json['Config']
   end
 
   it 'image should be available' do
