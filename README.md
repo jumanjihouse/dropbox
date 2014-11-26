@@ -63,6 +63,7 @@ Test harness
       should accept anonymous login
       should deny directory listing
       should upload a file in binary mode
+      upload should be readable by testuser
 
     contributor friction
       there should not be any

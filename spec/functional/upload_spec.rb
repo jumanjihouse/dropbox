@@ -5,13 +5,11 @@ require 'tempfile'
 describe 'container' do
   before :all do
     @ip = `ip route get 8.8.8.8 | awk '/src/{print $NF}'`
-  end
-
-  before :example do
     File.unlink('/tmp/README.md') if File.exist?('/tmp/README.md')
+    `sudo useradd testuser`
   end
 
-  after :example do
+  after :all do
     File.unlink('/tmp/README.md') if File.exist?('/tmp/README.md')
   end
 
@@ -42,5 +40,10 @@ describe 'container' do
     remote_md5sum = Digest::MD5.hexdigest(File.read('/tmp/README.md'))
 
     local_md5sum.should eql remote_md5sum
+  end
+
+  it 'upload should be readable by testuser' do
+    `sudo -u testuser cat /tmp/README.md`
+    $CHILD_STATUS.exitstatus.should be_zero
   end
 end
