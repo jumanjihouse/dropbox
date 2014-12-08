@@ -66,6 +66,7 @@ Test harness
       should deny directory listing
       should upload a file in binary mode
       upload should be readable by testuser
+      should allow anonymous to mkdir
 
     contributor friction
       there should not be any
