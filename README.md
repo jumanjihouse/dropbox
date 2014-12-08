@@ -51,9 +51,11 @@ Test harness
 [![wercker status](https://app.wercker.com/status/5e3783b502f86813e39799ba012f69a6/s/master "wercker status")](https://app.wercker.com/project/bykey/5e3783b502f86813e39799ba012f69a6)
 
     jumanjiman/dropbox
+      should use correct docker API version
       image should be available
-      should expose ftp port and only ftp port
-      should have volume /var/ftp/pub/uploads
+      image properties
+        should expose ftp port and only ftp port
+        should have volume /var/ftp/pub/uploads
 
     users with interactive shells
       should only include "root"
