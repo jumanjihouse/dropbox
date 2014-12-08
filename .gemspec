@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q('Test harness for this repo')
   gem.license       = 'GPLv3'
 
-  gem.add_development_dependency 'docker-api', '>= 0.11'
+  gem.add_development_dependency 'docker-api', '>= 1.13.5', '< 1.16.0'
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'minitest'
   gem.add_development_dependency 'mocha'
