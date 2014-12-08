@@ -46,4 +46,12 @@ describe 'container' do
     `sudo -u testuser cat /tmp/README.md`
     $CHILD_STATUS.exitstatus.should be_zero
   end
+
+  it 'should allow anonymous to mkdir' do
+    ftp = Net::FTP.new(@ip)
+    ftp.login
+    ftp.chdir('uploads')
+    expect { ftp.mkdir('test') }.to_not raise_error
+    ftp.quit
+  end
 end
