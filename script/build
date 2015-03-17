@@ -7,6 +7,4 @@ function smitty() {
   $@
 }
 
-smitty pushd src/
-smitty docker build --rm -t jumanjiman/dropbox .
-smitty popd
+smitty docker build --rm -t jumanjiman/dropbox src/

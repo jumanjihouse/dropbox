@@ -7,7 +7,7 @@
 #
 require 'English'
 Gem::Specification.new do |gem|
-  gem.name          = 'dropbox test suite'
+  gem.name          = 'dropbox_test_suite'
   gem.homepage      = 'https://github.com/jumanjiman/dropbox'
   gem.description   = %q('Test harness for this repo')
   gem.summary       = %q('Test harness for this repo')
