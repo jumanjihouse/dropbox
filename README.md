@@ -70,3 +70,5 @@ Test harness
 
     contributor friction
       there should not be any
+
+blah
