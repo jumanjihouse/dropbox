@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'spec_helper'
 
-def docker_run(cmd = 'bash')
+def docker_run(cmd = 'sh')
   IO.popen("docker run --rm -t jumanjiman/dropbox #{cmd}").readlines
 end
 

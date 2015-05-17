@@ -1,14 +1,19 @@
-# https://index.docker.io/_/fedora/
-FROM fedora:latest
+FROM alpine:latest
 
 # http://jumanjiman.github.io/
 MAINTAINER Paul Morgan <jumanjiman@gmail.com>
 
 # Install dependencies.
-RUN yum install -y vsftpd; yum clean all
+RUN apk upgrade --update --available && \
+    apk add \
+      vsftpd \
+    && rm -f /var/cache/apk/*
 
 # Create sandbox user for vsftpd to run unprivileged.
-RUN useradd -s /sbin/nologin user
+# Remove accounts with interactive shells.
+RUN adduser -D -s /sbin/nologin user && \
+    deluser operator && \
+    deluser postgres
 
 EXPOSE 21/tcp
 ENV LANG C
