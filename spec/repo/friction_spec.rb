@@ -7,7 +7,8 @@ require 'stringio'
 # as workaround for friction gem. bleh.
 module Kernel
   def capture_stdout
-    real_out, out = $stdout, StringIO.new
+    real_out = $stdout
+    out = StringIO.new
     $stdout = out
     yield
     return out.string
