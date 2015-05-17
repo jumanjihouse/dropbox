@@ -1,5 +1,8 @@
 ## Overview
 
+[![](https://badge.imagelayers.io/jumanjiman/dropbox.svg)](https://imagelayers.io/?images=jumanjiman/dropbox:latest 'Get your own badge on imagelayers.io')&nbsp;
+[![Circle CI](https://circleci.com/gh/jumanjihouse/dropbox.png?circle-token=601e7931628cb4cd1cd524db581322d89204370f)](https://circleci.com/gh/jumanjihouse/dropbox/tree/master 'View CI builds')
+
 Docker-based ftp dropbox.
 
 ### User experience
