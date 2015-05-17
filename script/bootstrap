@@ -1,17 +1,17 @@
 #!/bin/sh
 set -e
 
-function err() {
+err() {
   echo "[ERROR] $1" >&2
   exit 1
 }
 
-function smitty() {
+smitty() {
   echo; echo
   echo "[INFO] $@"
   $@
 }
 
-git remote show upstream &> /dev/null || smitty git remote add upstream https://github.com/jumanjiman/dropbox.git
+git remote show upstream &> /dev/null || smitty git remote add upstream https://github.com/jumanjihouse/dropbox.git
 
 smitty bundle update 2> /dev/null || smitty bundle install --path=~/.bundle

@@ -8,5 +8,5 @@ function smitty() {
 }
 
 smitty pushd src/
-smitty docker build --rm -t jumanjiman/dropbox .
+smitty docker build -t jumanjiman/dropbox:latest .
 smitty popd

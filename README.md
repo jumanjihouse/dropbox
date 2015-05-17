@@ -48,8 +48,6 @@ Then run:
 Test harness
 ------------
 
-[![wercker status](https://app.wercker.com/status/5e3783b502f86813e39799ba012f69a6/s/master "wercker status")](https://app.wercker.com/project/bykey/5e3783b502f86813e39799ba012f69a6)
-
     jumanjiman/dropbox
       should use correct docker API version
       image should be available
