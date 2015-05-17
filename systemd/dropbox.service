@@ -4,8 +4,8 @@ After=docker.service
 Require=docker.service
 
 [Service]
-ExecStartPre=modprobe nf_conntrack_ftp
-ExecStartPre=modprobe nf_nat_ftp
+ExecStartPre=/usr/sbin/modprobe nf_conntrack_ftp
+ExecStartPre=/usr/sbin/modprobe nf_nat_ftp
 ExecStart=/bin/bash -c '/usr/bin/docker start dropbox || /usr/bin/docker run -d --name dropbox -v /tmp:/var/ftp/pub/uploads -p 21:21 jumanjiman/dropbox'
 ExecStop=/usr/bin/docker stop dropbox
 RestartSec=5s
