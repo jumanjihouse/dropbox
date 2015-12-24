@@ -1,5 +1,9 @@
 # https://circleci.com/docs/docker
 machine:
+  environment:
+    # If you change this version, you need to change Dockerfile.
+    VERSION: 3.0.2-r10
+    TAG: ${VERSION}-$(date +%Y%m%dT%H%M)-git-${CIRCLE_SHA1:0:7}
   services:
     - docker
 
@@ -17,7 +21,7 @@ deployment:
     owner: jumanjihouse
     commands:
       - docker login -e ${mail} -u ${user} -p ${pass}
-      - docker tag jumanjiman/dropbox:latest jumanjiman/dropbox:${CIRCLE_SHA1:0:7}
-      - docker push jumanjiman/dropbox:${CIRCLE_SHA1:0:7}
+      - docker tag jumanjiman/dropbox:latest jumanjiman/dropbox:${TAG}
+      - docker push jumanjiman/dropbox:${TAG}
       - docker push jumanjiman/dropbox:latest
       - docker logout

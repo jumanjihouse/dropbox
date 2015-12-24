@@ -12,6 +12,11 @@ Source: [https://github.com/jumanjihouse/dropbox]
 Docker Hub: [https://registry.hub.docker.com/u/jumanjiman/dropbox/]
 (https://registry.hub.docker.com/u/jumanjiman/dropbox/)
 
+Docker tags:
+
+* optimistic: `latest`
+* pessimistic: `${vsftpd_version}-${build_date}-git-${hash}`
+
 
 ### User experience
 

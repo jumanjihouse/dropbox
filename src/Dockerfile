@@ -3,10 +3,13 @@ FROM alpine:3.2
 # http://jumanjiman.github.io/
 MAINTAINER Paul Morgan <jumanjiman@gmail.com>
 
+# If you change this version, you need to change circle.yml
+ENV VERSION=3.0.2-r10
+
 # Install dependencies.
 RUN apk upgrade --update --available && \
     apk add \
-      vsftpd \
+      "vsftpd>=${VERSION}" \
     && rm -f /var/cache/apk/*
 
 EXPOSE 21/tcp
