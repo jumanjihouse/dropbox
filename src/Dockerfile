@@ -1,17 +1,17 @@
-FROM alpine:3.2
+FROM alpine:3.3
 
 # http://jumanjiman.github.io/
 MAINTAINER Paul Morgan <jumanjiman@gmail.com>
 
 # If you change this version, you need to change circle.yml
-ENV VERSION=3.0.2-r10
+ENV VERSION=3.0.3-r0
 
 # Install dependencies.
-RUN apk upgrade --update --available && \
-    apk add \
+RUN apk upgrade --no-cache --available && \
+    apk add --no-cache \
       "libssl1.0>=1.0.2e-r0" \
       "vsftpd>=${VERSION}" \
-    && rm -f /var/cache/apk/*
+    && :
 
 EXPOSE 21/tcp
 ENV LANG C
