@@ -6,7 +6,7 @@ def docker_run(cmd = 'sh')
 end
 
 describe 'users with interactive shells' do
-  it 'should only include "root"' do
+  it 'nobody should have an interactive shell' do
     # Which interactive shells are allowed in container?
     shells = docker_run('cat /etc/shells')
     shells.map!(&:chomp).reject! { |s| s.match %r{/sbin/nologin} }
@@ -19,6 +19,6 @@ describe 'users with interactive shells' do
       users << fields[0] if shells.include?(fields[6].chomp)
     end
 
-    users.should =~ %w(root)
+    users.should =~ %w()
   end
 end

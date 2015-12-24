@@ -9,20 +9,13 @@ RUN apk upgrade --update --available && \
       vsftpd \
     && rm -f /var/cache/apk/*
 
-# Create sandbox user for vsftpd to run unprivileged.
-# Remove accounts with interactive shells.
-RUN adduser -D -s /sbin/nologin user && \
-    deluser operator && \
-    deluser postgres
-
 EXPOSE 21/tcp
 ENV LANG C
 
 # Configure vsftpd.
 COPY . /
+RUN /usr/sbin/harden.sh
 
-RUN mkdir -pm 0711 /var/empty/vsftpd
-RUN mkdir -pm 2733 /var/ftp/pub/uploads
 VOLUME ["/var/ftp/pub/uploads"]
 
 CMD /start.sh
