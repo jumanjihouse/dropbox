@@ -19,13 +19,10 @@ EXPOSE 21/tcp
 ENV LANG C
 
 # Configure vsftpd.
-ADD issue.net /etc/issue.net
-ADD start.sh /start.sh
+COPY . /
 
 RUN mkdir -pm 0711 /var/empty/vsftpd
 RUN mkdir -pm 2733 /var/ftp/pub/uploads
 VOLUME ["/var/ftp/pub/uploads"]
-
-ADD vsftpd.conf /etc/vsftpd/vsftpd.conf
 
 CMD /start.sh
