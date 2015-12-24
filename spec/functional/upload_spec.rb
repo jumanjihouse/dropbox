@@ -2,9 +2,26 @@
 require 'spec_helper'
 require 'tempfile'
 
+describe 'nat modules' do
+  before :all do
+    @output = `lsmod`.split
+  end
+
+  it 'nf_nat_ftp should be loaded' do
+    pending 'circleci does not allow to load modules'
+    @output.should include('nf_nat_ftp')
+  end
+
+  it 'nf_conntrack_ftp should be loaded' do
+    pending 'circleci does not allow to load modules'
+    @output.should include('nf_conntrack_ftp')
+  end
+end
+
 describe 'container' do
   before :all do
-    @ip = `ip route get 8.8.8.8 | awk '/src/{print $NF}'`
+    @ip = `docker inspect --format '{{ .NetworkSettings.IPAddress }}' dropbox`
+    @ip.chomp!
     File.unlink('/tmp/README.md') if File.exist?('/tmp/README.md')
     `sudo useradd testuser`
   end
