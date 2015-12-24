@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.2
 
 # http://jumanjiman.github.io/
 MAINTAINER Paul Morgan <jumanjiman@gmail.com>
