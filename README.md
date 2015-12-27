@@ -4,6 +4,7 @@ Docker-based ftp dropbox.
 
 [![Image Size](https://img.shields.io/imagelayers/image-size/jumanjiman/dropbox/latest.svg)](https://imagelayers.io/?images=jumanjiman/dropbox:latest 'View image size and layers')&nbsp;
 [![Image Layers](https://img.shields.io/imagelayers/layers/jumanjiman/dropbox/latest.svg)](https://imagelayers.io/?images=jumanjiman/dropbox:latest)&nbsp;
+[![Docker Registry](https://img.shields.io/docker/pulls/jumanjiman/dropbox.svg)](https://registry.hub.docker.com/u/jumanjiman/dropbox 'Docker Hub')&nbsp;
 [![Circle CI](https://circleci.com/gh/jumanjihouse/dropbox.png?circle-token=601e7931628cb4cd1cd524db581322d89204370f)](https://circleci.com/gh/jumanjihouse/dropbox/tree/master 'View CI builds')
 
 Source: [https://github.com/jumanjihouse/dropbox]
